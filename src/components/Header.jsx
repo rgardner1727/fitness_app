@@ -8,7 +8,7 @@ const Header = () => {
                     <p className="nav-slogan">#FLEX</p>
                 </div>
                 <div className="main-nav-right">
-                    <p className="nav-action-main">FLEX+</p>
+                    <p className="nav-action">FLEX+</p>
                     <p className="nav-action">Login</p>
                     <p className="nav-action">Free Trial</p>
                     <p className="nav-action">Join</p>

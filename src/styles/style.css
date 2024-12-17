@@ -1,284 +1,223 @@
-:root {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    --color: #ccc;
-}
-
 html, body, #root {
     height: 100vh;
-    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.main-nav {
-    display: flex;
-    background-color: #252525;
+body {
+    margin: 0px;
 }
 
-.main-nav-left {
-    display: flex;
-    padding-left: 20px;
-}
+@media screen and (max-width: 480px) {
+    .main-nav {
+        display: flex;
+        justify-content: center;
+        background-color: #252525;
+    }
 
-.main-nav-right {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    padding-right: 20px;
-}
+    .main-nav-left {
+        display: none;
+    }
 
-.nav-slogan {
-    font-size: 1.25rem;
-    color: var(--color);
-    font-weight: bold;
-    background-color: #252525;
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: background-color 0.2s ease;
-    cursor: pointer;
-}
+    .main-nav-right {
+        display: flex;
+        padding: 10px 5px;
+    }
 
-.nav-slogan:hover {
-    background-color: #363636;
-}
+    .nav-action {
+        margin: 5px 10px;
+        font-size: .875rem;
+        color: #ccc;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.2s ease;
+    }
 
-.nav-action {
-    font-size: 1.25rem;
-    color: var(--color);
-    font-weight: bold;
-    background-color: #252525;
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin: 0px 10px;
-    transition: background-color 0.2s ease-in-out;
-    cursor: pointer;
-}
+    .nav-action:hover {
+        color: #ff0000c0
+    }
 
-.nav-action:hover {
-    background-color: #363636;
-}
+    /*-----------------------------*/
 
-.nav-action-main {
-    font-size: 1.75rem;
-    color: var(--color);
-    font-weight: bolder;
-    margin: 0px 30px 0px 30px;
-    transition: font-size 0.2s ease, color 0.2s ease;
-    cursor: pointer;
-}
+    .signup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-image: url("../assets/gym-image.webp");
+        background-size: cover;
+    }
 
-.nav-action-main:hover {
-    font-size: 2rem;
-    color: red;
-}
+    .call-to-action {
+        font-size: 1.5rem;
+        text-align: center;
+        text-shadow: 0 0 8px #000;
+        color: #fff;
+    }
 
-.signup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url('../assets/gym-image.webp');
-    background-size: cover;
-    height: 600px;
-}
+    .join-button {
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: border-radius 0.2s ease;
+    }
 
-.call-to-action {
-    color: #fff;
-    text-shadow: 8px 0 8px #0e0e0e;
-    font-size: 6rem;
-    text-align: center;
-}
+    .join-button:hover {
+        border-radius: 10px;
+    }
 
-.join-button {
-    padding: 20px 40px;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    border-radius: 0px;
-    box-shadow: 0 0 12px #000;
-    transition: border-radius 0.2s ease;
-    cursor: pointer;
-}
+    .membership-text {
+        font-size: 1.25rem;
+        text-align: center;
+        text-shadow: 0 0 8px #000;
+        color: #fff;
+    }
 
-.join-button:hover {
-    border-radius: 20px;
-}
+    /*-----------------------------*/
 
-.membership-text {
-    color: #fff;
-    text-shadow: 8px 0 12px #0e0e0e;
-    font-size: 2rem;
-    font-style: italic;
-    text-align: center;
-}
+    .location {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background: linear-gradient(to right, #fd1515, #fd1515c0);
+    }
 
-.location {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to right, #ff0f0fe0, #af0000e0);
-    padding: 20px;
-}
+    .location-h4 {
+        margin: 10px 0px;
+        text-align: center;
+        color: #fff;
+        font-size: 1rem;
+    }
 
-.location-h4 {
-    font-size: 1.25rem;
-    color: #fff;
-    margin-bottom: 0;
-}
+    .location-display {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
 
-.location-h2 {
-    font-size: 2rem;
-    font-weight: 400;
-    color: #fff;
-}
+    .location-h2 {
+        margin: 10px 0px 5px 0px;
+        text-align: center;
+        color: #fff;
+        font-size: 1.25rem;
+    }
 
-.gym-details-btn {
-    background-color: #fff;
-    color: #000;
-    font-size: 1rem;
-    border: none;
-    border-radius: 0px;
-    padding: 20px 40px;
-    font-weight: 500;
-    margin-right: 5px;
-    transition: border-radius 0.2s ease;
-    cursor: pointer;
-}
+    .gym-location {
+        font-weight: bold;
+        cursor: pointer;
+    }
 
-.gym-details-btn:hover {
-    border-radius: 10px;
-}
+    .gym-location:hover {
+        border-bottom: 1px dashed #fff;
+    }
 
-.join-btn {
-    background-color: #fff;
-    color: #000;
-    font-size: 1rem;
-    border: none;
-    border-radius: 0px;
-    padding: 20px 40px;
-    font-weight: 500;
-    margin-left: 5px;
-    transition: border-radius 0.2s ease;
-    cursor: pointer;
-}
+    .edit-location-button {
+        border: none;
+        background-color: transparent;
+        color: #fff;
+        font-weight: bold;
+        transition: color 0.2s ease;
+    }
 
-.join-btn:hover {
-    border-radius: 10px;
-}
+    .edit-location-button:hover {
+        color: #eee;
+    }
 
-.gym-location {
-    padding-bottom: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
+    .location-button-container {
+        display: flex;
+        justify-content: center;
+    }
 
-.gym-location:hover {
-    border-bottom: 2px dashed #fff;
-}
+    .gym-details-btn {
+        border: none;
+        background-color: #fff;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: .75rem;
+        transition: border-radius 0.2s ease;
+        margin: 5px;
+    }
 
-.location-display {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .gym-details-btn:hover {
+        border-radius: 10px;
+    }
 
-.edit-location-button {
-    margin-left: 10px;
-    background-color: transparent;
-    border: none;
-    font-size: .875rem;
-    color: #fff;
-    font-weight: 300;
-    text-align: center;
-    cursor: pointer;
-}
+    .join-btn {
+        border: none;
+        background-color: #fff;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: .75rem;
+        transition: border-radius 0.2s ease;
+        margin: 5px;
+    }
 
-.edit-location-button:hover {
-    color: #eeeeee
-}
+    .join-btn:hover {
+        border-radius: 10px;
+    }
 
-.pricing-container {
-    display: flex;
-    justify-content: center;
-    background-color: #f8f8f8;
-    padding: 20px;
-}
+    /*-----------------------------*/
 
-.pricing-option {
-    width: 200px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #000;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: border 0.2s ease;
-    margin: 0px 30px;
-}
+    .pricing-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
 
-.pricing-option:hover {
-    border: 1px solid red;
-}
+    .pricing-option {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #000;
+        transition: border 0.2s ease, border-radius 0.2s ease;
+    }
 
-.pricing-label {
-    margin-bottom: 20px;
-    text-align: center;
-}
+    .pricing-option:hover {
+        border: 1px solid #ff0000c0;
+        border-radius: 10px;
+    }
 
-.price {
-    margin-bottom: 10px;
-    text-align: center;
-}
+    .per-month {
+        font-size: 1rem;
+        font-weight: 400;
+    }
 
-.per-month {
-    font-size: 1rem;
-    font-weight: 400;
-}
+    .pricing-label {
+        text-align: center;
+    }
 
-.package-items {
-    list-style-type: none;
-    padding-left: 0px;
-    margin-bottom: 30px;
-}
+    .price {
+        text-align: center;
+        margin-bottom: 5px;
+    }
 
-.package-items li {
-    margin-bottom: 10px;
-    text-align: center;
-    color: #111111
-}
+    .package-items {
+        list-style-type: none;
+        padding-left: 0px;
+    }
 
-.pricing-button {
-    display: block;
-    width: 100%;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: red;
-    border: none;
-    color: #fff;
-    transition: border-radius 0.2s ease;
-}
+    .package-items li {
+        text-align: center;
+        margin: 5px 0px;
+    }
 
-.pricing-button:hover {
-    border-radius: 10px;
-}
+    .pricing-button {
+        display: block;
+        width: 100%;
+        border: none;
+        background-color: #ff0000c0;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 10px 20px;
+        transition: border-radius 0.2s ease;
+    }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    background-color: #252525;
-    padding: 20px;
-}
-
-.copyright-text {
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: font-size 0.2s ease;
-    text-decoration: none;
-}
-
-.copyright-text:hover {
-    font-size: 1.125rem;
+    .pricing-button:hover {
+        border-radius: 10px;
+    }
 }
