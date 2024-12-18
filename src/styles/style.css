@@ -1,3 +1,13 @@
+:root {
+    --nav-background-color: #252525;
+    --primary-button-background-color: #fff;
+    --accent-color: #ff0000c0;
+    --nav-button-background-color: #3d3d3d;
+    --nav-button-color: #ccc;
+    --cta-color: #fff;
+    --tertiary-hover-color: #eee;
+}
+
 html, body, #root {
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -10,8 +20,8 @@ body {
 @media screen and (max-width: 480px) {
     .main-nav {
         display: flex;
-        justify-content: center;
-        background-color: #252525;
+        justify-content: left;
+        background-color: var(--nav-background-color);
     }
 
     .main-nav-left {
@@ -20,20 +30,23 @@ body {
 
     .main-nav-right {
         display: flex;
-        padding: 10px 5px;
+        padding: 5px;
     }
 
     .nav-action {
-        margin: 5px 10px;
-        font-size: .875rem;
-        color: #ccc;
+        margin: 2.5px;
+        padding: 10px 20px;
+        font-size: .75rem;
+        background-color: var(--nav-button-background-color);
+        border-radius: 10px;
+        color: var(--nav-button-color);
         font-weight: bold;
         cursor: pointer;
         transition: color 0.2s ease;
     }
 
     .nav-action:hover {
-        color: #ff0000c0
+        color: var(--accent-color);
     }
 
     /*-----------------------------*/
@@ -52,15 +65,16 @@ body {
         font-size: 1.5rem;
         text-align: center;
         text-shadow: 0 0 8px #000;
-        color: #fff;
+        color: var(--cta-color);
     }
 
     .join-button {
         border: none;
         padding: 10px 20px;
-        font-size: 1rem;
+        font-size: 1.25rem;
         font-weight: bold;
         transition: border-radius 0.2s ease;
+        cursor: pointer;
     }
 
     .join-button:hover {
@@ -68,10 +82,10 @@ body {
     }
 
     .membership-text {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
         text-align: center;
         text-shadow: 0 0 8px #000;
-        color: #fff;
+        color: var(--cta-color);
     }
 
     /*-----------------------------*/
@@ -88,7 +102,7 @@ body {
     .location-h4 {
         margin: 10px 0px;
         text-align: center;
-        color: #fff;
+        color: var(--cta-color);
         font-size: 1rem;
     }
 
@@ -103,7 +117,7 @@ body {
     .location-h2 {
         margin: 10px 0px 5px 0px;
         text-align: center;
-        color: #fff;
+        color: var(--cta-color);
         font-size: 1.25rem;
     }
 
@@ -113,19 +127,20 @@ body {
     }
 
     .gym-location:hover {
-        border-bottom: 1px dashed #fff;
+        border-bottom: 1px dashed var(--cta-color);
     }
 
     .edit-location-button {
         border: none;
         background-color: transparent;
-        color: #fff;
+        color: var(--cta-color);
         font-weight: bold;
         transition: color 0.2s ease;
+        cursor: pointer;
     }
 
     .edit-location-button:hover {
-        color: #eee;
+        color: var(--tertiary-hover-color);
     }
 
     .location-button-container {
@@ -135,12 +150,13 @@ body {
 
     .gym-details-btn {
         border: none;
-        background-color: #fff;
+        background-color: var(--primary-button-background-color);
         padding: 10px 20px;
         font-weight: bold;
         font-size: .75rem;
         transition: border-radius 0.2s ease;
         margin: 5px;
+        cursor: pointer;
     }
 
     .gym-details-btn:hover {
@@ -149,12 +165,13 @@ body {
 
     .join-btn {
         border: none;
-        background-color: #fff;
+        background-color: var(--primary-button-background-color);
         padding: 10px 20px;
         font-weight: bold;
         font-size: .75rem;
         transition: border-radius 0.2s ease;
         margin: 5px;
+        cursor: pointer;
     }
 
     .join-btn:hover {
@@ -177,7 +194,7 @@ body {
     }
 
     .pricing-option:hover {
-        border: 1px solid #ff0000c0;
+        border: 1px solid var(--accent-color);
         border-radius: 10px;
     }
 
@@ -209,12 +226,253 @@ body {
         display: block;
         width: 100%;
         border: none;
-        background-color: #ff0000c0;
-        color: #fff;
+        background-color: var(--accent-color);
+        color: var(--cta-color);
         font-size: 1rem;
         font-weight: bold;
         padding: 10px 20px;
         transition: border-radius 0.2s ease;
+        cursor: pointer;
+    }
+
+    .pricing-button:hover {
+        border-radius: 10px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 760px) {
+    .main-nav {
+        display: flex;
+        justify-content: left;
+        background-color: var(--nav-background-color);
+        padding: 10px 5px;
+    }
+
+    .main-nav-left {
+        display: flex;
+    }
+
+    .nav-slogan {
+        padding: 10px 20px;
+        margin: 5px;
+        background-color: var(--nav-button-background-color);
+        border-radius: 10px;
+        color: var(--nav-button-color);
+        font-weight: bold;
+        transition: color 0.2s ease;
+        cursor: pointer;
+    }
+
+    .nav-slogan:hover {
+        color: var(--accent-color);
+    }
+
+    .main-nav-right {
+        display: flex;
+    }
+
+    .nav-action {
+        padding: 10px 20px;
+        margin: 5px;
+        background-color: var(--nav-button-background-color);
+        border-radius: 10px;
+        color: var(--nav-button-color);
+        font-weight: bold;
+        transition: color 0.2s ease;
+        cursor: pointer;
+    }
+
+    .nav-action:hover {
+        color: var(--accent-color);
+    }
+
+    /*---------------------------------*/
+
+    .signup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../assets/gym-image.webp");
+        background-size: cover;
+        height: 400px;
+    }
+
+    .call-to-action {
+        font-size: 2.5rem;
+        text-align: center;
+        text-shadow: 0 0 8px #000;
+        color: var(--cta-color);
+    }
+
+    .join-button{
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.75rem;
+        font-weight: bold;
+        transition: border-radius 0.2s ease;
+        cursor: pointer;
+    }
+
+    .join-button:hover {
+        border-radius: 10px;
+    }
+
+    .membership-text {
+        font-size: 1.5rem;
+        text-align: center;
+        text-shadow: 0 0 8px #000;
+        color: var(--cta-color);
+    }
+
+    /*----------------------------*/
+
+    .location {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background: linear-gradient(to right, #fd1515, #fd1515c0);
+    }
+
+    .location-h4 {
+        margin: 10px 0px;
+        text-align: center;
+        color: var(--cta-color);
+        font-size: 1.15rem;
+    }
+
+    .location-display {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .location-h2 {
+        margin: 10px 0px 5px 0px;
+        text-align: center;
+        color: var(--cta-color);
+        font-size: 1.5rem;
+    }
+
+    .gym-location {
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .gym-location:hover {
+        border-bottom: 1px dashed var(--cta-color);
+    }
+
+    .edit-location-button {
+        border: none;
+        background-color: transparent;
+        color: var(--cta-color);
+        font-weight: bold;
+        transition: color 0.2s ease;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+
+    .edit-location-button:hover {
+        color: var(--tertiary-hover-color);
+    }
+
+    .location-button-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .gym-details-btn {
+        border: none;
+        background-color: var(--primary-button-background-color);
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: border-radius 0.2s ease;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .gym-details-btn:hover {
+        border-radius: 10px;
+    }
+
+    .join-btn {
+        border: none;
+        background-color: var(--primary-button-background-color);
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: border-radius 0.2s ease;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .join-btn:hover {
+        border-radius: 10px;
+    }
+
+    /*----------------------------*/
+
+    .pricing-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .pricing-option {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #000;
+        transition: border 0.2s ease, border-radius 0.2s ease;
+    }
+
+    .pricing-option:hover {
+        border: 1px solid var(--accent-color);
+        border-radius: 10px;
+    }
+
+    .per-month {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .pricing-label {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .price {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .package-items {
+        list-style-type: none;
+        padding-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    .package-items li {
+        text-align: center;
+        margin: 5px 0px;
+    }
+
+    .pricing-button {
+        display: block;
+        width: 100%;
+        border: none;
+        background-color: var(--accent-color);
+        color: var(--cta-color);
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 10px 20px;
+        transition: border-radius 0.2s ease;
+        cursor: pointer;
     }
 
     .pricing-button:hover {

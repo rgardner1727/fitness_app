@@ -10,7 +10,6 @@ const Header = () => {
                 <div className="main-nav-right">
                     <p className="nav-action">FLEX+</p>
                     <p className="nav-action">Login</p>
-                    <p className="nav-action">Free Trial</p>
                     <p className="nav-action">Join</p>
                 </div>
             </nav>
